@@ -1,0 +1,556 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B7434EEE18457422003468D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7434EED18457422003468D9 /* Foundation.framework */; };
+		B7434EF018457422003468D9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7434EEF18457422003468D9 /* CoreGraphics.framework */; };
+		B7434EF218457422003468D9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7434EF118457422003468D9 /* UIKit.framework */; };
+		B7434EF818457422003468D9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B7434EF618457422003468D9 /* InfoPlist.strings */; };
+		B7434EFA18457422003468D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B7434EF918457422003468D9 /* main.m */; };
+		B7434EFE18457422003468D9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B7434EFD18457422003468D9 /* AppDelegate.m */; };
+		B7434F0018457422003468D9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7434EFF18457422003468D9 /* Images.xcassets */; };
+		B7434F0718457422003468D9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7434F0618457422003468D9 /* XCTest.framework */; };
+		B7434F0818457422003468D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7434EED18457422003468D9 /* Foundation.framework */; };
+		B7434F0918457422003468D9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7434EF118457422003468D9 /* UIKit.framework */; };
+		B7434F1118457422003468D9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B7434F0F18457422003468D9 /* InfoPlist.strings */; };
+		B7434F1318457422003468D9 /* ScalesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B7434F1218457422003468D9 /* ScalesTests.m */; };
+		B7434F1E18457445003468D9 /* ScalesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7434F1D18457445003468D9 /* ScalesViewController.m */; };
+		B7434F2118457498003468D9 /* ToneGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = B7434F2018457498003468D9 /* ToneGenerator.m */; };
+		B7434F23184574CA003468D9 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7434F22184574CA003468D9 /* AudioToolbox.framework */; };
+		B7434F261845A43E003468D9 /* KeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7434F251845A43E003468D9 /* KeyboardView.m */; };
+		B7434F291845B314003468D9 /* KeyView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7434F281845B314003468D9 /* KeyView.m */; };
+		B7434F321845D123003468D9 /* Keyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = B7434F311845D123003468D9 /* Keyboard.m */; };
+		B7434F351845D14C003468D9 /* Key.m in Sources */ = {isa = PBXBuildFile; fileRef = B7434F341845D14C003468D9 /* Key.m */; };
+		B7434F3C1847CC22003468D9 /* OptionsView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7434F3B1847CC22003468D9 /* OptionsView.m */; };
+		B7434F43184C0681003468D9 /* ScaleTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7434F42184C0681003468D9 /* ScaleTitleView.m */; };
+		B7434F47184C5BFF003468D9 /* ScaleTonicView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7434F46184C5BFF003468D9 /* ScaleTonicView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B7434F0A18457422003468D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7434EE218457422003468D9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7434EE918457422003468D9;
+			remoteInfo = Scales;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B7434EEA18457422003468D9 /* Scales.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scales.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7434EED18457422003468D9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B7434EEF18457422003468D9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B7434EF118457422003468D9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B7434EF518457422003468D9 /* Scales-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Scales-Info.plist"; sourceTree = "<group>"; };
+		B7434EF718457422003468D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B7434EF918457422003468D9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B7434EFB18457422003468D9 /* Scales-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Scales-Prefix.pch"; sourceTree = "<group>"; };
+		B7434EFC18457422003468D9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B7434EFD18457422003468D9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B7434EFF18457422003468D9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B7434F0518457422003468D9 /* ScalesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScalesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7434F0618457422003468D9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		B7434F0E18457422003468D9 /* ScalesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ScalesTests-Info.plist"; sourceTree = "<group>"; };
+		B7434F1018457422003468D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B7434F1218457422003468D9 /* ScalesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScalesTests.m; sourceTree = "<group>"; };
+		B7434F1C18457445003468D9 /* ScalesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScalesViewController.h; sourceTree = "<group>"; };
+		B7434F1D18457445003468D9 /* ScalesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScalesViewController.m; sourceTree = "<group>"; };
+		B7434F1F18457498003468D9 /* ToneGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToneGenerator.h; sourceTree = "<group>"; };
+		B7434F2018457498003468D9 /* ToneGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToneGenerator.m; sourceTree = "<group>"; };
+		B7434F22184574CA003468D9 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		B7434F241845A43E003468D9 /* KeyboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardView.h; sourceTree = "<group>"; };
+		B7434F251845A43E003468D9 /* KeyboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardView.m; sourceTree = "<group>"; };
+		B7434F271845B314003468D9 /* KeyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyView.h; sourceTree = "<group>"; };
+		B7434F281845B314003468D9 /* KeyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyView.m; sourceTree = "<group>"; };
+		B7434F301845D123003468D9 /* Keyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Keyboard.h; sourceTree = "<group>"; };
+		B7434F311845D123003468D9 /* Keyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Keyboard.m; sourceTree = "<group>"; };
+		B7434F331845D14C003468D9 /* Key.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Key.h; sourceTree = "<group>"; };
+		B7434F341845D14C003468D9 /* Key.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Key.m; sourceTree = "<group>"; };
+		B7434F3A1847CC22003468D9 /* OptionsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsView.h; sourceTree = "<group>"; };
+		B7434F3B1847CC22003468D9 /* OptionsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsView.m; sourceTree = "<group>"; };
+		B7434F41184C0681003468D9 /* ScaleTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScaleTitleView.h; sourceTree = "<group>"; };
+		B7434F42184C0681003468D9 /* ScaleTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScaleTitleView.m; sourceTree = "<group>"; };
+		B7434F45184C5BFF003468D9 /* ScaleTonicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScaleTonicView.h; sourceTree = "<group>"; };
+		B7434F46184C5BFF003468D9 /* ScaleTonicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScaleTonicView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B7434EE718457422003468D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7434F23184574CA003468D9 /* AudioToolbox.framework in Frameworks */,
+				B7434EF018457422003468D9 /* CoreGraphics.framework in Frameworks */,
+				B7434EF218457422003468D9 /* UIKit.framework in Frameworks */,
+				B7434EEE18457422003468D9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7434F0218457422003468D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7434F0718457422003468D9 /* XCTest.framework in Frameworks */,
+				B7434F0918457422003468D9 /* UIKit.framework in Frameworks */,
+				B7434F0818457422003468D9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B7434EE118457422003468D9 = {
+			isa = PBXGroup;
+			children = (
+				B7434EF318457422003468D9 /* Scales */,
+				B7434F0C18457422003468D9 /* ScalesTests */,
+				B7434EEC18457422003468D9 /* Frameworks */,
+				B7434EEB18457422003468D9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B7434EEB18457422003468D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B7434EEA18457422003468D9 /* Scales.app */,
+				B7434F0518457422003468D9 /* ScalesTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B7434EEC18457422003468D9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B7434F22184574CA003468D9 /* AudioToolbox.framework */,
+				B7434EED18457422003468D9 /* Foundation.framework */,
+				B7434EEF18457422003468D9 /* CoreGraphics.framework */,
+				B7434EF118457422003468D9 /* UIKit.framework */,
+				B7434F0618457422003468D9 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B7434EF318457422003468D9 /* Scales */ = {
+			isa = PBXGroup;
+			children = (
+				B7434EFC18457422003468D9 /* AppDelegate.h */,
+				B7434EFD18457422003468D9 /* AppDelegate.m */,
+				B7434F1C18457445003468D9 /* ScalesViewController.h */,
+				B7434F1D18457445003468D9 /* ScalesViewController.m */,
+				B7434F48184C5C16003468D9 /* ScaleTonicView */,
+				B7434F44184C0685003468D9 /* ScaleTitleView */,
+				B7434F391847CC0B003468D9 /* OptionsView */,
+				B7434F361847CBD6003468D9 /* KeyboardView */,
+				B7434F371847CBEF003468D9 /* KeyboardModel */,
+				B7434F1F18457498003468D9 /* ToneGenerator.h */,
+				B7434F2018457498003468D9 /* ToneGenerator.m */,
+				B7434EFF18457422003468D9 /* Images.xcassets */,
+				B7434EF418457422003468D9 /* Supporting Files */,
+			);
+			path = Scales;
+			sourceTree = "<group>";
+		};
+		B7434EF418457422003468D9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B7434EF518457422003468D9 /* Scales-Info.plist */,
+				B7434EF618457422003468D9 /* InfoPlist.strings */,
+				B7434EF918457422003468D9 /* main.m */,
+				B7434EFB18457422003468D9 /* Scales-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B7434F0C18457422003468D9 /* ScalesTests */ = {
+			isa = PBXGroup;
+			children = (
+				B7434F1218457422003468D9 /* ScalesTests.m */,
+				B7434F0D18457422003468D9 /* Supporting Files */,
+			);
+			path = ScalesTests;
+			sourceTree = "<group>";
+		};
+		B7434F0D18457422003468D9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B7434F0E18457422003468D9 /* ScalesTests-Info.plist */,
+				B7434F0F18457422003468D9 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B7434F361847CBD6003468D9 /* KeyboardView */ = {
+			isa = PBXGroup;
+			children = (
+				B7434F241845A43E003468D9 /* KeyboardView.h */,
+				B7434F251845A43E003468D9 /* KeyboardView.m */,
+				B7434F271845B314003468D9 /* KeyView.h */,
+				B7434F281845B314003468D9 /* KeyView.m */,
+			);
+			name = KeyboardView;
+			sourceTree = "<group>";
+		};
+		B7434F371847CBEF003468D9 /* KeyboardModel */ = {
+			isa = PBXGroup;
+			children = (
+				B7434F301845D123003468D9 /* Keyboard.h */,
+				B7434F311845D123003468D9 /* Keyboard.m */,
+				B7434F331845D14C003468D9 /* Key.h */,
+				B7434F341845D14C003468D9 /* Key.m */,
+			);
+			name = KeyboardModel;
+			sourceTree = "<group>";
+		};
+		B7434F391847CC0B003468D9 /* OptionsView */ = {
+			isa = PBXGroup;
+			children = (
+				B7434F3A1847CC22003468D9 /* OptionsView.h */,
+				B7434F3B1847CC22003468D9 /* OptionsView.m */,
+			);
+			name = OptionsView;
+			sourceTree = "<group>";
+		};
+		B7434F44184C0685003468D9 /* ScaleTitleView */ = {
+			isa = PBXGroup;
+			children = (
+				B7434F41184C0681003468D9 /* ScaleTitleView.h */,
+				B7434F42184C0681003468D9 /* ScaleTitleView.m */,
+			);
+			name = ScaleTitleView;
+			sourceTree = "<group>";
+		};
+		B7434F48184C5C16003468D9 /* ScaleTonicView */ = {
+			isa = PBXGroup;
+			children = (
+				B7434F45184C5BFF003468D9 /* ScaleTonicView.h */,
+				B7434F46184C5BFF003468D9 /* ScaleTonicView.m */,
+			);
+			name = ScaleTonicView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B7434EE918457422003468D9 /* Scales */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7434F1618457422003468D9 /* Build configuration list for PBXNativeTarget "Scales" */;
+			buildPhases = (
+				B7434EE618457422003468D9 /* Sources */,
+				B7434EE718457422003468D9 /* Frameworks */,
+				B7434EE818457422003468D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Scales;
+			productName = Scales;
+			productReference = B7434EEA18457422003468D9 /* Scales.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B7434F0418457422003468D9 /* ScalesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7434F1918457422003468D9 /* Build configuration list for PBXNativeTarget "ScalesTests" */;
+			buildPhases = (
+				B7434F0118457422003468D9 /* Sources */,
+				B7434F0218457422003468D9 /* Frameworks */,
+				B7434F0318457422003468D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B7434F0B18457422003468D9 /* PBXTargetDependency */,
+			);
+			name = ScalesTests;
+			productName = ScalesTests;
+			productReference = B7434F0518457422003468D9 /* ScalesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B7434EE218457422003468D9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = Kev;
+				TargetAttributes = {
+					B7434F0418457422003468D9 = {
+						TestTargetID = B7434EE918457422003468D9;
+					};
+				};
+			};
+			buildConfigurationList = B7434EE518457422003468D9 /* Build configuration list for PBXProject "Scales" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B7434EE118457422003468D9;
+			productRefGroup = B7434EEB18457422003468D9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B7434EE918457422003468D9 /* Scales */,
+				B7434F0418457422003468D9 /* ScalesTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B7434EE818457422003468D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7434EF818457422003468D9 /* InfoPlist.strings in Resources */,
+				B7434F0018457422003468D9 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7434F0318457422003468D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7434F1118457422003468D9 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B7434EE618457422003468D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7434F1E18457445003468D9 /* ScalesViewController.m in Sources */,
+				B7434F351845D14C003468D9 /* Key.m in Sources */,
+				B7434EFE18457422003468D9 /* AppDelegate.m in Sources */,
+				B7434F47184C5BFF003468D9 /* ScaleTonicView.m in Sources */,
+				B7434F291845B314003468D9 /* KeyView.m in Sources */,
+				B7434F3C1847CC22003468D9 /* OptionsView.m in Sources */,
+				B7434F261845A43E003468D9 /* KeyboardView.m in Sources */,
+				B7434F43184C0681003468D9 /* ScaleTitleView.m in Sources */,
+				B7434F321845D123003468D9 /* Keyboard.m in Sources */,
+				B7434EFA18457422003468D9 /* main.m in Sources */,
+				B7434F2118457498003468D9 /* ToneGenerator.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7434F0118457422003468D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7434F1318457422003468D9 /* ScalesTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B7434F0B18457422003468D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B7434EE918457422003468D9 /* Scales */;
+			targetProxy = B7434F0A18457422003468D9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B7434EF618457422003468D9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B7434EF718457422003468D9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B7434F0F18457422003468D9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B7434F1018457422003468D9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B7434F1418457422003468D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B7434F1518457422003468D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B7434F1718457422003468D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Scales/Scales-Prefix.pch";
+				INFOPLIST_FILE = "Scales/Scales-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B7434F1818457422003468D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Scales/Scales-Prefix.pch";
+				INFOPLIST_FILE = "Scales/Scales-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		B7434F1A18457422003468D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Scales.app/Scales";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Scales/Scales-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ScalesTests/ScalesTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		B7434F1B18457422003468D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Scales.app/Scales";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Scales/Scales-Prefix.pch";
+				INFOPLIST_FILE = "ScalesTests/ScalesTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B7434EE518457422003468D9 /* Build configuration list for PBXProject "Scales" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7434F1418457422003468D9 /* Debug */,
+				B7434F1518457422003468D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7434F1618457422003468D9 /* Build configuration list for PBXNativeTarget "Scales" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7434F1718457422003468D9 /* Debug */,
+				B7434F1818457422003468D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7434F1918457422003468D9 /* Build configuration list for PBXNativeTarget "ScalesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7434F1A18457422003468D9 /* Debug */,
+				B7434F1B18457422003468D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B7434EE218457422003468D9 /* Project object */;
+}
