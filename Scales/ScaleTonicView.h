@@ -24,6 +24,8 @@
 @property UISwipeGestureRecognizer *swipeGestureLeftRecognizer;
 @property UISwipeGestureRecognizer *swipeGestureRightRecognizer;
 
+@property BOOL animationRunning;
+
 - (void)setTonic:(NSString*)tonic;
 
 @end

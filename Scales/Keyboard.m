@@ -60,30 +60,24 @@
 
 - (void)changePosition:(int)position
 {
-    self.position = position - 2;
+    self.position = position;
     if (self.numOctaves == 1)
     {
-        NSAssert(self.position >= -2 && self.position <= 2, @"Position out of bounds for 2 octaves!");
+        NSAssert(self.position >= 0 && self.position <= 1, @"Position out of bounds for 1 octaves!");
     }
     if (self.numOctaves == 2)
     {
-        NSAssert(self.position >= -2 && self.position <= 1, @"Position out of bounds for 2 octaves!");
+        NSAssert(self.position == 0, @"Position out of bounds for 2 octaves!");
     }
 }
 - (void)changeNumOctave:(int)numOctave
 {
     self.numOctaves = numOctave;
     if (self.numOctaves == 2) {
-        if (self.position > 1)
-        {
-            self.position = 1;
-        }
+        self.position = 0;
     }
     if (self.numOctaves == 1) {
-        if (self.position == 3)
-        {
-            self.position = 3;
-        }
+        self.position = 0;
     }
 }
 
@@ -93,11 +87,11 @@
     self.keys = [NSMutableArray new];
     // GET THE TYPE OF SCALE
     NSArray* scale = self.scales[self.currentScale][1];
-    int scaleNum = [scale count];
+    int scaleNum = (int)[scale count];
     // CALCULATE THE NUMBER OF KEYS
-    int numKeys = ([scale count] * self.numOctaves) + 1;
+    int numKeys = (int)([scale count] * self.numOctaves) + 1;
     // CALCULATE START NOTE NUM
-    int startNoteNum = [self.tonics[self.currentTonic][1] integerValue] + self.position * OCTAVE;
+    int startNoteNum = (int)[self.tonics[self.currentTonic][1] integerValue] + (self.position + 1) * OCTAVE;
     
     for (int i = 0; i < numKeys; ++i)
     {

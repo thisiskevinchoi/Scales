@@ -12,6 +12,7 @@
 
 - (void)octavePositionChanged:(int)position;
 - (void)octaveNumChanged:(int)num;
+- (void)soundWaveNumChanged:(int)position;
 
 @end
 
@@ -24,9 +25,11 @@
 @property UISegmentedControl *twoOctavePositionSegmentedControl;
 
 @property UISegmentedControl *octaveNumSegmentedControl;
+@property UISegmentedControl *soundWaveSegmentedControl;
 
 - (void)setSegmentedControlForOctave:(int)numOctaves;
 - (void)setOctivePositionSegmentedControlPosition:(int)position;
 - (void)setOctaveNumSegmentedControlPosition:(int)position;
+- (void)setSoundWaveSegmentedControlPosition:(int)position;
 
 @end

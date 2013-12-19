@@ -42,7 +42,8 @@
         self.swipeGestureRightRecognizer.direction = UISwipeGestureRecognizerDirectionRight;
         self.swipeGestureRightRecognizer.numberOfTouchesRequired = 1;
         [self addGestureRecognizer:self.swipeGestureRightRecognizer];
-
+        
+        self.animationRunning = NO;
     }
     return self;
 }
@@ -63,10 +64,11 @@
 
 - (void)handleSwipes:(UISwipeGestureRecognizer*)paramSender
 {
-    if (paramSender.direction & UISwipeGestureRecognizerDirectionLeft){
+    if ((paramSender.direction == UISwipeGestureRecognizerDirectionLeft) & !self.animationRunning){
         // NSLog(@"Swiped Left.");
         if (self.delegate != nil) {
-            [UIView animateWithDuration:0.3f
+            self.animationRunning = YES;
+            [UIView animateWithDuration:0.2f
                                   delay:0
                                 options:UIViewAnimationOptionCurveEaseInOut
                              animations:^
@@ -75,15 +77,28 @@
              }
                              completion:^(BOOL finished)
              {
-                 self.tonicLabel.center = CGPointMake(2*self.frame.size.width, self.tonicLabel.center.y);
-                 [self.delegate swipeTonicLeft];
+                 [UIView animateWithDuration:0.2f
+                                       delay:0
+                                     options:UIViewAnimationOptionCurveEaseInOut
+                                  animations:^
+                  {
+                      self.tonicLabel.center = CGPointMake(2*self.frame.size.width, self.tonicLabel.center.y);
+                      [self.delegate swipeTonicLeft];
+                  }
+                                  completion:^(BOOL finished)
+                  {
+                      
+                      self.animationRunning = NO;
+                  }
+                  ];
              }];
         }
     }
-    if (paramSender.direction & UISwipeGestureRecognizerDirectionRight){
+    if ((paramSender.direction == UISwipeGestureRecognizerDirectionRight) & !self.animationRunning){
         // NSLog(@"Swiped Right.");
         if (self.delegate != nil) {
-            [UIView animateWithDuration:0.3f
+            self.animationRunning = YES;
+            [UIView animateWithDuration:0.2f
                                   delay:0
                                 options:UIViewAnimationOptionCurveEaseInOut
                              animations:^
@@ -92,8 +107,19 @@
              }
                              completion:^(BOOL finished)
              {
-                 self.tonicLabel.center = CGPointMake(-self.frame.size.width, self.tonicLabel.center.y);
-                 [self.delegate swipeTonicRight];
+                 [UIView animateWithDuration:0.2f
+                                       delay:0
+                                     options:UIViewAnimationOptionCurveEaseInOut
+                                  animations:^
+                  {
+                      self.tonicLabel.center = CGPointMake(-self.frame.size.width, self.tonicLabel.center.y);
+                      [self.delegate swipeTonicRight];
+                  }
+                                  completion:^(BOOL finished)
+                  {
+                      self.animationRunning = NO;
+                  }
+                  ];
              }];
         }
     }

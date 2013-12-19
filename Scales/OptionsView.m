@@ -21,6 +21,10 @@
         
         // SET UP OCTAVE NUMBER SEGMENTED VIEW
         [self setUpOctaveNumSegmentedControl];
+        
+        // SET UP SOUND WAVE SEGMENTED VIEW
+        [self setUpSoundWaveSegmentedControl];
+        
     }
     return self;
 }
@@ -31,8 +35,8 @@
 
 - (void)setUpOctavePositionSegmentedControl
 {
-    self.oneOctavePositionSegmentedControl = [[UISegmentedControl alloc] initWithItems:@[@"-2", @"-1", @"0", @"+1", @"+2"]];
-    self.twoOctavePositionSegmentedControl = [[UISegmentedControl alloc] initWithItems:@[@"-1", @"0", @"1"]];
+    self.oneOctavePositionSegmentedControl = [[UISegmentedControl alloc] initWithItems:@[@"-", @"+"]];
+    self.twoOctavePositionSegmentedControl = [[UISegmentedControl alloc] initWithItems:@[@"="]];
     
     self.oneOctavePositionSegmentedControl.center = CGPointMake(self.frame.size.width/2, self.frame.size.height/2);
     self.twoOctavePositionSegmentedControl.center = CGPointMake(self.frame.size.width/2, self.frame.size.height/2);
@@ -53,14 +57,15 @@
 - (void)octavePositionSegmentChanged:(UISegmentedControl *)paramSender
 {
     NSInteger selectedSegmentIndex = [paramSender selectedSegmentIndex];
-    [self setOctivePositionSegmentedControlPosition:selectedSegmentIndex];
+    [self setOctivePositionSegmentedControlPosition:(int)selectedSegmentIndex];
     if (self.delegate != nil) {
-        [self.delegate octavePositionChanged:selectedSegmentIndex];
+        [self.delegate octavePositionChanged:(int)selectedSegmentIndex];
     }
 }
 
 - (void)setSegmentedControlForOctave:(int)numOctaves
 {
+    [self setOctivePositionSegmentedControlPosition:0];
     [self.oneOctavePositionSegmentedControl removeFromSuperview];
     [self.twoOctavePositionSegmentedControl removeFromSuperview];
     if (numOctaves == 1)
@@ -79,7 +84,7 @@
 
 - (void)setUpOctaveNumSegmentedControl
 {
-    self.octaveNumSegmentedControl = [[UISegmentedControl alloc] initWithItems:@[@"1", @"2"]];
+    self.octaveNumSegmentedControl = [[UISegmentedControl alloc] initWithItems:@[@"1 Octave", @"2 Octaves"]];
     
     self.octaveNumSegmentedControl.center = CGPointMake(self.frame.size.width/4, self.frame.size.height/2);
     
@@ -98,12 +103,47 @@
 - (void)octaveNumSegmentChanged:(UISegmentedControl *)paramSender
 {
     NSInteger selectedSegmentIndex = [paramSender selectedSegmentIndex];
-    [self setOctaveNumSegmentedControlPosition:selectedSegmentIndex];
+    [self setOctaveNumSegmentedControlPosition:(int)selectedSegmentIndex];
     if (self.delegate != nil) {
-        [self.delegate octaveNumChanged:selectedSegmentIndex+1];
+        [self.delegate octaveNumChanged:(int)selectedSegmentIndex+1];
     }
 }
 
+//
+// METHODS FOR SOUND WAVE
+//
+
+- (void)setUpSoundWaveSegmentedControl
+{
+    self.soundWaveSegmentedControl = [[UISegmentedControl alloc] initWithItems:@[@"Sine", @"Square", @"Sawtooth", @"Triangle"]];
+    UIFont *font = [UIFont boldSystemFontOfSize:10.0f];
+    NSDictionary *attributes = [NSDictionary dictionaryWithObject:font
+                                                           forKey:NSFontAttributeName];
+    [self.soundWaveSegmentedControl setTitleTextAttributes:attributes
+                                    forState:UIControlStateNormal];
+    self.soundWaveSegmentedControl.center = CGPointMake(8.15*self.frame.size.width/10.0, self.frame.size.height/2);
+    
+    self.soundWaveSegmentedControl.tintColor = [UIColor colorWithRed:255.0/255.0 green:120.0/255.0 blue:120.0/255.0 alpha:1];
+    
+    [self.soundWaveSegmentedControl addTarget:self action:@selector(soundWaveSegmentChanged:) forControlEvents:UIControlEventValueChanged];
+    
+    [self addSubview:self.soundWaveSegmentedControl];
+
+}
+
+- (void)setSoundWaveSegmentedControlPosition:(int)position
+{
+    [self.soundWaveSegmentedControl setSelectedSegmentIndex:position];
+}
+
+- (void)soundWaveSegmentChanged:(UISegmentedControl *)paramSender
+{
+    NSInteger selectedSegmentIndex = [paramSender selectedSegmentIndex];
+    [self setSoundWaveSegmentedControlPosition:(int)selectedSegmentIndex];
+    if (self.delegate != nil) {
+        [self.delegate soundWaveNumChanged:(int)selectedSegmentIndex];
+    }
+}
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

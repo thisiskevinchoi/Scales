@@ -54,8 +54,11 @@
         // SET OCTAVE POSITION
         [self.optionsView setSegmentedControlForOctave:self.keyboard.numOctaves];
         // returns true or false... FIXME
-        [self.optionsView setOctivePositionSegmentedControlPosition:2];
-        [self.keyboard changePosition:2];
+        [self.optionsView setOctivePositionSegmentedControlPosition:0];
+        [self.keyboard changePosition:0];
+        
+        // SET SOUND WAVE POSITION
+        [self.optionsView setSoundWaveSegmentedControlPosition:0];
         
         // SET SCALE TITLE
         [self.scaleTitleView setTitle:[self.keyboard getScale]];
@@ -67,8 +70,8 @@
         [self.keyboard setKeys];
         
         // CREATE KEYS (FIXME) (CREATE KEYS REMOVES FROM VIEW... I THINK)
-        int notesInScale = ([[self.keyboard keys] count] - 1) / [self.keyboard numOctaves];
-        [self.keyboardView createKeys:[[self.keyboard keys] count] withScale:notesInScale];
+        int notesInScale = (int)([[self.keyboard keys] count] - 1) / [self.keyboard numOctaves];
+        [self.keyboardView createKeys:(int)[[self.keyboard keys] count] withScale:notesInScale];
     }
     return self;
 }
@@ -76,7 +79,6 @@
 - (void)octavePositionChanged:(int)position
 {
     // SET OCTAVE POSITION
-    [self.optionsView setSegmentedControlForOctave:self.keyboard.numOctaves];
     [self.keyboard changePosition:position];
     
     // (create keyboard model from the given parameters, hard coded in for now
@@ -96,8 +98,14 @@
     [self.keyboard setKeys];
     
     // CREATE KEYS (FIXME)
-    int notesInScale = ([[self.keyboard keys] count] - 1) / [self.keyboard numOctaves];
-    [self.keyboardView createKeys:[[self.keyboard keys] count] withScale:notesInScale];
+    int notesInScale = (int)([[self.keyboard keys] count] - 1) / [self.keyboard numOctaves];
+    [self.keyboardView createKeys:(int)[[self.keyboard keys] count] withScale:notesInScale];
+}
+
+- (void)soundWaveNumChanged:(int)position
+{
+    [self.optionsView setSoundWaveSegmentedControlPosition:position];
+    [self.toneGenerator setSoundWave:position];
 }
 
 //
@@ -125,32 +133,32 @@
 {
     [self.scaleTitleView setTitle:[self.keyboard changeScaleLeft]];
     // CREATE KEYS (FIXME) (CREATE KEYS REMOVES FROM VIEW... I THINK)
-    int notesInScale = ([[self.keyboard keys] count] - 1) / [self.keyboard numOctaves];
-    [self.keyboardView createKeys:[[self.keyboard keys] count] withScale:notesInScale];
+    int notesInScale = (int)([[self.keyboard keys] count] - 1) / [self.keyboard numOctaves];
+    [self.keyboardView createKeys:(int)[[self.keyboard keys] count] withScale:notesInScale];
 }
 
 - (void)swipeScaleRight
 {
     [self.scaleTitleView setTitle:[self.keyboard changeScaleRight]];
     // CREATE KEYS (FIXME) (CREATE KEYS REMOVES FROM VIEW... I THINK)
-    int notesInScale = ([[self.keyboard keys] count] - 1) / [self.keyboard numOctaves];
-    [self.keyboardView createKeys:[[self.keyboard keys] count] withScale:notesInScale];
+    int notesInScale = (int)([[self.keyboard keys] count] - 1) / [self.keyboard numOctaves];
+    [self.keyboardView createKeys:(int)[[self.keyboard keys] count] withScale:notesInScale];
 }
 
 - (void)swipeTonicLeft
 {
     [self.scaleTonicView setTonic:[self.keyboard changeTonicLeft]];
     // CREATE KEYS (FIXME) (CREATE KEYS REMOVES FROM VIEW... I THINK)
-    int notesInScale = ([[self.keyboard keys] count] - 1) / [self.keyboard numOctaves];
-    [self.keyboardView createKeys:[[self.keyboard keys] count] withScale:notesInScale];
+    int notesInScale = (int)([[self.keyboard keys] count] - 1) / [self.keyboard numOctaves];
+    [self.keyboardView createKeys:(int)[[self.keyboard keys] count] withScale:notesInScale];
 }
 
 - (void)swipeTonicRight
 {
     [self.scaleTonicView setTonic:[self.keyboard changeTonicRight]];
     // CREATE KEYS (FIXME) (CREATE KEYS REMOVES FROM VIEW... I THINK)
-    int notesInScale = ([[self.keyboard keys] count] - 1) / [self.keyboard numOctaves];
-    [self.keyboardView createKeys:[[self.keyboard keys] count] withScale:notesInScale];
+    int notesInScale = (int)([[self.keyboard keys] count] - 1) / [self.keyboard numOctaves];
+    [self.keyboardView createKeys:(int)[[self.keyboard keys] count] withScale:notesInScale];
 }
 
 - (void)viewDidLoad

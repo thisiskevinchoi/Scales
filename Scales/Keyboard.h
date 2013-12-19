@@ -22,6 +22,7 @@
 @property int numOctaves;
 @property int position;
 
+
 - (NSMutableArray*)setKeys;
 - (void)changePosition:(int)position;
 - (void)changeNumOctave:(int)numOctave;

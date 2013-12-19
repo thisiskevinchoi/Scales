@@ -15,8 +15,14 @@
 
 @property double amplitude;
 @property double frequency;
+@property double goalAmplitude;
+@property double goalFrequency;
 @property double sampleRate;
-@property double theta;
+@property double phase;
+@property int state;
+@property int fadePosition;
+@property int soundWave;
+@property NSMutableArray* fadeCurve;
 
 - (void)playToneWithFreq:(double)freq andAmplitude:(double)amp;
 - (void)setFrequency:(double)freq andAmplitude:(double)amp;
