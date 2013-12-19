@@ -45,6 +45,15 @@
     return self;
 }
 
+// UNUSED
+- (void)kill
+{
+    AudioOutputUnitStop(_toneUnit);
+    AudioUnitUninitialize(_toneUnit);
+    AudioComponentInstanceDispose(_toneUnit);
+    _toneUnit = nil;
+}
+
 //- (void)createFadeOutArray
 //{
 //    self.fadeOutCurve = [NSMutableArray arrayWithArray:@[]];
@@ -257,10 +266,6 @@ OSStatus RenderTone(
 
 - (void)stop
 {
-//    AudioOutputUnitStop(_toneUnit);
-//    AudioUnitUninitialize(_toneUnit);
-//    AudioComponentInstanceDispose(_toneUnit);
-    //    _toneUnit = nil;
     self.goalAmplitude = 0;
     [self createAmplitudeArray];
     //self.fadePosition = 0;
